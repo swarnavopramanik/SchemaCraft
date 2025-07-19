@@ -12,8 +12,8 @@ const SchemaBuilder = () => {
   };
 
   return (
-    <div className="p-6 flex flex-wrap md:flex-nowrap gap-6">
-      <div className="flex-4 space-y-2">
+    <div className="p-6 flex flex-wrap md:flex-nowrap gap-8">
+      <div className="flex-4 space-y-4 w-full md:w-2/3">
         {schema.map((field, index) => (
           <FieldItem
             key={index}
@@ -30,9 +30,22 @@ const SchemaBuilder = () => {
             }}
           />
         ))}
-        <Button onClick={() => setSchema([...schema, { key: "", type: "string" }])}>
+        <Button 
+        onClick={() => setSchema([...schema, { key: "", type: "string" }])}
+          className="bg-black hover:bg-purple-800 text-white"
+          >
           + Add Field
         </Button>
+        <div className="flex gap-1">
+        <Button
+    onClick={() => {
+      console.log("Submit clicked");
+    }}
+    className="bg-green-600 hover:bg-green-700 text-white"
+  >
+    Submit
+  </Button>
+      </div>
       </div>
 
       <div className="w-full md:w-1/3">
