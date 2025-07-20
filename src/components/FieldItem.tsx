@@ -1,5 +1,5 @@
-import React from "react"; 
-import { Input } from "./../components/ui/input"; 
+import React from "react";
+import { Input } from "./../components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -7,7 +7,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"; 
+} from "@/components/ui/select";
 import type { SchemaField } from "@/utils/types";
 
 interface FieldItemProps {
@@ -17,15 +17,15 @@ interface FieldItemProps {
   onDelete: () => void;
 }
 
-const FieldItem: React.FC<FieldItemProps> = ({field, onChange, onDelete }) => {
+const FieldItem: React.FC<FieldItemProps> = ({ field, onChange, onDelete }) => {
   const handleKeyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange({ ...field, key: e.target.value });
   };
 
   const handleTypeChange = (value: string) => {
-    const updatedField = {
+    const updatedField: SchemaField = {
       ...field,
-      type: value as "string" | "number" | "nested",
+      type: value as SchemaField["type"],
       children: value === "nested" ? field.children ?? [] : undefined,
     };
     onChange(updatedField);
@@ -57,16 +57,20 @@ const FieldItem: React.FC<FieldItemProps> = ({field, onChange, onDelete }) => {
           placeholder="Field Name"
           value={field.key}
           onChange={handleKeyChange}
-          className="w-[160px]"
+          className="w-[200px]"
         />
         <Select value={field.type} onValueChange={handleTypeChange}>
-          <SelectTrigger className="w-[120px]">
+          <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Field Type" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent>      
+            <SelectItem value="nested" className="font-bold text-blue-700">nested</SelectItem>
             <SelectItem value="string">string</SelectItem>
             <SelectItem value="number">number</SelectItem>
-            <SelectItem value="nested">nested</SelectItem>
+            <SelectItem value="float">float</SelectItem>
+            <SelectItem value="boolean">boolean</SelectItem>
+            <SelectItem value="objectid">objectid</SelectItem>
+            
           </SelectContent>
         </Select>
         <Button variant="ghost" size="sm" onClick={onDelete}>

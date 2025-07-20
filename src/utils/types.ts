@@ -1,4 +1,4 @@
-export type FieldType = "string" | "number" | "nested" | "boolean" | "any";
+export type FieldType = "string" | "number" | "float" | "boolean" | "objectid" | "nested";
 
 export interface SchemaField {
   key: string;

@@ -12,8 +12,8 @@ const SchemaBuilder = () => {
   };
 
   return (
-    <div className="p-6 flex flex-wrap md:flex-nowrap gap-8">
-      <div className="flex-4 space-y-4 w-full md:w-2/3">
+    <div className="p-8 flex flex-wrap md:flex-nowrap gap-8">
+      <div className="flex-4 space-y-4 w-full md:w-1/3">
         {schema.map((field, index) => (
           <FieldItem
             key={index}
@@ -36,7 +36,7 @@ const SchemaBuilder = () => {
           >
           + Add Field
         </Button>
-        <div className="flex gap-1">
+        <div className="flex gap-3">
         <Button
     onClick={() => {
       console.log("Submit clicked");
