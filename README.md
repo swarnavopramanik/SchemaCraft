@@ -29,8 +29,8 @@ A dynamic and recursive JSON Schema Builder built using **ReactJS**, **React Hoo
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/json-schema-builder.git
-cd json-schema-builder
+
+https://github.com/swarnavopramanik/SchemaCraft.git
 
 ```
 
