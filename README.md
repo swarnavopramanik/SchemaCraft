@@ -41,3 +41,4 @@ https://github.com/swarnavopramanik/SchemaCraft.git
 ## Deploy ✅
 
 - [LINK](https://schemacraft-fawn.vercel.app/)
+- [VIDEO LINK](https://vimeo.com/1103150284?share=copy)
