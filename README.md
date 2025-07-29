@@ -4,7 +4,6 @@ A dynamic and recursive JSON Schema Builder built using **ReactJS**, **React Hoo
 
 ---
 
-[Json Builder.webm](https://github.com/user-attachments/assets/9d131c50-d427-4718-a0ae-e9f50c3e88da)
 
 
 ## 🚀 Live Features
